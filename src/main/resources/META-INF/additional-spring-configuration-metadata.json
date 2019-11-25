@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "com.egrecomag.AutoExamquiz.service.UserService",
+      "type": "java.lang.String",
+      "description": "Description for com.egrecomag.AutoExamquiz.service.UserService."
+    }
+  ] }
