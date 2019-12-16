@@ -1,0 +1,84 @@
+#cssmenu {
+    max-height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background: black;
+    padding: 20px 40px 10px 50px;
+    color: white;
+}
+
+#cssmenu li {
+    margin:0;
+    padding: 0;
+    display: inline-block;
+    height: 150px;
+}
+
+
+
+.cssbody {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-image: url("backroundimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.cssbodyabout{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-image: url("hackerman.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+table.table-body{
+    margin-top: 9%;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: initial;
+}
+
+.footer-area {
+    max-height: 70px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    font-family: "Times New Roman", serif;
+    background: #696969;
+    color: white;
+    margin: 0;
+    height: 100px;
+    text-align: center;
+    padding: 20px 40px 10px 50px;
+}
+
+.footer-area p{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 30px;
+    color: white;
+}

@@ -21,6 +21,11 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
+    @GetMapping("/index")
+    public String index (Model model){
+        return "index";
+    }
+
     @GetMapping("/registration")
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
@@ -40,7 +45,7 @@ public class UserController {
 
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcome";
+        return "redirect:/index";
     }
 
     @GetMapping("/login")
@@ -58,4 +63,11 @@ public class UserController {
     public String welcome(Model model) {
         return "welcome";
     }
+
+    @GetMapping("/about")
+    public String about (Model model) {return "about";}
+
+    @GetMapping("/question1")
+    public String question1 (Model model) {return "question1";}
+
 }

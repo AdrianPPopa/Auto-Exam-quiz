@@ -4,5 +4,10 @@
       "name": "com.egrecomag.AutoExamquiz.service.UserService",
       "type": "java.lang.String",
       "description": "Description for com.egrecomag.AutoExamquiz.service.UserService."
+    },
+    {
+      "name": "spring.mvc.view.sufix",
+      "type": "java.lang.String",
+      "description": "Description for spring.mvc.view.sufix."
     }
   ] }
