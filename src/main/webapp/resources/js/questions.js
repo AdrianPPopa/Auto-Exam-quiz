@@ -20,15 +20,15 @@ window.Questionwindow = {
     },
 
     getQuestionHtml: function(question){
-        return '<div class="single-question-area">\n' +
-            '<table>\n' +
-            '    `<tr>\n' +
-            '    <td class="question-content">\n' +
-            '        <a href="">question.content</a>\n' +
-            '    </td>\n' +
-            '    </tr>`\n' +
-            '</table>\n' +
-            '</div>'
+        return `<div class="single-question-area">
+                <table>
+                  <tr>
+                     <td class="question-content">
+                      <a> ${question.content}</a>
+                     </td>
+                  </tr>
+                </table>
+                </div>`
     }
 };
 Questionwindow.getQuestions();

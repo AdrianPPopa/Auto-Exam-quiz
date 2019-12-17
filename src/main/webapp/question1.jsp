@@ -7,13 +7,12 @@
     <title>question1</title>
 </head>
 <body>
-<p>If you see this its working</p>
-<h2>Users</h2>
+<h2>Auto Exam</h2>
 <div class="single-question-area">
 <table>
     `<tr>
     <td class="question-content">
-        <a href=""></a>
+        <a></a>
     </td>
     </tr>`
 </table>
