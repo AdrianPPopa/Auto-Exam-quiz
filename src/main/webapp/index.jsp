@@ -13,7 +13,7 @@
 <body>
 <div id="cssmenu">
     <ul>
-        <li>Home</li>
+        <li><a href="">Home</a></li>
         <li>Login</li>
         <li>Register</li>
         <li><a href="about.jsp">About</a></li>

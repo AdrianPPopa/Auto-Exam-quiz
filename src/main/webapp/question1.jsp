@@ -8,18 +8,33 @@
 </head>
 <body>
 <h2>Auto Exam</h2>
-<div class="single-question-area">
+<div class="quizmain">
+    <h3></h3>
 <table>
-    `<tr>
-    <td class="question-content">
+    <tr>
+    <td class="quizmain">
         <a></a>
     </td>
-    </tr>`
+    </tr>
+    <tr>
+        <td class="question-content">
+            <a></a>
+        </td>
+        <td class="answer-content">
+            <a></a>
+        </td>
+    </tr>
 </table>
+</div>
+
+<div>
+<p></p>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="resources/js/questions.js"></script>
+<%--<script src="resources/js/answers.js"></script>--%>
+
 </body>
 </html>
 

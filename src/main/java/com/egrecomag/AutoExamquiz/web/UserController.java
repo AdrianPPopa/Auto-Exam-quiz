@@ -22,7 +22,7 @@ public class UserController {
     private UserValidator userValidator;
 
     @GetMapping("/index")
-    public String index (Model model){
+    public String index (){
         return "index";
     }
 
@@ -60,14 +60,14 @@ public class UserController {
     }
 
     @GetMapping({"/", "/welcome"})
-    public String welcome(Model model) {
+    public String welcome() {
         return "welcome";
     }
 
     @GetMapping("/about")
-    public String about (Model model) {return "about";}
+    public String about () {return "about";}
 
     @GetMapping("/question1")
-    public String question1 (Model model) {return "question1";}
+    public String question1 () {return "question1";}
 
 }

@@ -11,25 +11,49 @@ window.Questionwindow = {
         })
     },
 
+    getAnswers: function () {
+        $.ajax({
+            url: Questionwindow.API_BASE_URL + "/answers/",
+            method: "GET"
+        }).done(function (response) {
+            console.log(response);
+            Questionwindow.displayAnswer(response.content);
+        })
+    },
+
+
+
     displayQuestions: function(questions){
         var allQuestionsHtml = "";
 
-        questions.forEach(question =>  allQuestionsHtml += Questionwindow.getQuestionHtml(question));
-        $(".single-question-area").html(allQuestionsHtml)
+        questions.forEach(question =>  allQuestionsHtml += Questionwindow.getHtml(question));
+        $(".quizmain").html(allQuestionsHtml)
 
     },
 
-    getQuestionHtml: function(question){
-        return `<div class="single-question-area">
-                <table>
-                  <tr>
-                     <td class="question-content">
-                      <a> ${question.content}</a>
-                     </td>
-                  </tr>
-                </table>
-                </div>`
+    displayAnswer: function (answers) {
+        var allAnswersHtml ="";
+
+        answers.forEach(answer => allAnswersHtml += Questionwindow.getHtml(answer));
+        $(".quizmain").html(allAnswersHtml);
+    },
+
+    getHtml: function(question,answer){
+        return `<div class="quizmain">
+                    <h3>Question ${question.id} of 10:</h3>
+                        <table>
+                           <tr>
+                             <td class="question-content">
+                               <a>${question.content}</a>
+                             </td>
+                             <td class="answer-content">
+                                <a>${answer.content}</a>
+                             </td>
+                             </tr>
+                        </table>
+                 </div>`
     }
 };
 Questionwindow.getQuestions();
+Questionwindow.getAnswers();
 
