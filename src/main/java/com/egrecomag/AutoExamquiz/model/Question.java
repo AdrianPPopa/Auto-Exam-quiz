@@ -10,7 +10,7 @@ import java.util.Objects;
 @Table(name = "questions")
 public class Question {
     @Id
-    private long id;
+    private int id;
 
     @NotNull
     private String content;
@@ -18,11 +18,15 @@ public class Question {
     public Question() {
     }
 
-    public long getId() {
+    public Question(@NotNull String content) {
+        this.content = content;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -33,6 +37,7 @@ public class Question {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     @Override
     public String toString() {

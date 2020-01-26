@@ -27,7 +27,7 @@ public class QuestionController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Question> getQuestion (@PathVariable("id") long id) {
+    public ResponseEntity<Question> getQuestion (@PathVariable("id") int id) {
         Question question = questionService.getQuestion(id);
         return new ResponseEntity<>(question, HttpStatus.OK);
     }

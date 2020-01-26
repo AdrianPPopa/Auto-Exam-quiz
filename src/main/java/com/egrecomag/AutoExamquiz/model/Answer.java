@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class Answer {
 
     @Id
-    private long id;
+    private int id;
 
     @NotNull
     private String content;
@@ -17,11 +17,16 @@ public class Answer {
     @NotNull
     private boolean isCorrect;
 
-    public long getId() {
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "question_id")
+    private Question question;
+
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -41,6 +46,15 @@ public class Answer {
         isCorrect = correct;
     }
 
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
     public Answer() {
     }
 
@@ -50,6 +64,7 @@ public class Answer {
                 "id=" + id +
                 ", content='" + content + '\'' +
                 ", isCorrect=" + isCorrect +
+                ", question=" + question +
                 '}';
     }
 }

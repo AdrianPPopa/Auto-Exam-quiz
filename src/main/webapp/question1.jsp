@@ -2,38 +2,32 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <title>question1</title>
+    <meta charset="utf-8">
+    <title>Auto Exam</title>
 </head>
 <body>
 <h2>Auto Exam</h2>
+
 <div class="quizmain">
     <h3></h3>
-<table>
-    <tr>
-    <td class="quizmain">
-        <a></a>
-    </td>
-    </tr>
-    <tr>
-        <td class="question-content">
-            <a></a>
-        </td>
-        <td class="answer-content">
-            <a></a>
-        </td>
-    </tr>
-</table>
-</div>
 
-<div>
-<p></p>
-</div>
+    <ol type ="1">
+        <li>
+            <ol type="a">
+                <li>
 
+                </li>
+            </ol>
+        </li>
+        </c:forEach>
+    </ol>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="resources/js/questions.js"></script>
-<%--<script src="resources/js/answers.js"></script>--%>
+<%--<script src="resources/js/questions.js"></script>--%>
+<script src="resources/js/answers.js"></script>
 
 </body>
 </html>

@@ -30,7 +30,7 @@ public class AnswerService {
     @Autowired
     public AnswerService(AnswerRepository answerRepository){this.answerRepository = answerRepository;}
 
-    public Answer getAnswer (long id){
+    public Answer getAnswer (int id){
         LOGGER.info("Retrieving answer {}", id);
 
         return answerRepository.findById(id)
@@ -52,6 +52,8 @@ public class AnswerService {
             AnswerResponse answersResponse = new AnswerResponse();
             answersResponse.setId(answer.getId());
             answersResponse.setContent(answer.getContent());
+            answersResponse.setCorrect(answer.isCorrect());
+            answersResponse.setQuestion_id((answer.getQuestion().getId()));
 
             answerResponses.add(answersResponse);
         }

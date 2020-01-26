@@ -20,6 +20,14 @@
         <li>Login</li>
         <li>Register</li>
         <li><a href="about.jsp">About</a></li>
+        <li> <c:if test="${pageContext.request.userPrincipal.name != null}">
+            <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            </form>
+
+            <a onclick="document.forms['logoutForm'].submit()">Logout</a>
+        </c:if>
+        </li>
     </ul>
 
 </div>

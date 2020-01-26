@@ -29,7 +29,7 @@ public class QuestionService {
     @Autowired
     public QuestionService(QuestionRepository questionRepository){this.questionRepository = questionRepository;}
 
-    public Question getQuestion(long id) {
+    public Question getQuestion(int id) {
         LOGGER.info("Retrieving question {}", id);
         // using Optional
         return questionRepository.findById(id)
@@ -52,6 +52,7 @@ public class QuestionService {
             QuestionResponse questionsResponse = new QuestionResponse();
             questionsResponse.setId(question.getId());
             questionsResponse.setContent(question.getContent());
+
 
             questionResponses.add(questionsResponse);
         }
