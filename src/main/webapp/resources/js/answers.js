@@ -1,9 +1,10 @@
+contextPath = undefined;
 window.Answerwindow ={
     API_BASE_URL: "http://localhost:8085",
 
     getQuestions: function () {
         $.ajax({
-            url: Answerwindow.API_BASE_URL + "/questions/" + "/answers",
+            url: Answerwindow.API_BASE_URL + "/questions/",
             method: "GET"
         }).done(function (response) {
             console.log(response);
@@ -21,30 +22,33 @@ window.Answerwindow ={
 
     },
 
-    displayAnswer: function (answers){
-        var allAnswersHtml = "";
-
-        answers.forEach(answer => allAnswersHtml =+ Answerwindow.getHtml(answer));
-        $(".quizmain").html(allAnswersHtml);
-        console.log(allAnswersHtml);
-    },
-
     getHtml: function (question) {
-        return `<div class="quizmain">
-                 <h3></h3>
-                
-                 <ol type ="1">
+        return `           
+                 <ol type="1">
                      <li>
-                        ${question.content}
+                        ${question.title}
+                        <input type="hidden" name="questionId" value="${question.id}">
                        <ol type="a">
-                       <c:foreach var="answer" items="${question.displayAnswer(answers)}"
-                      <li> 
+                      
+                      <li>                          
+                        ${question.answer1}
+                        <input type="radio" name="question_${question.id}" value="${question.answer1}">
                        </li>
-                        </ol>
+                       <li>
+                        ${question.answer2}
+                        <input type="radio" name="question_${question.id}" value="${question.answer2}">
+                       </li>
+                       <li>
+                         ${question.answer3}
+                         <input type="radio" name="question_${question.id}" value="${question.answer3}">
+                       </li>
+                       </ol>
                      </li>
                   </ol>
-            </div>`
-    }
+                `
+    },
+
+
 };
 
 Answerwindow.getQuestions();

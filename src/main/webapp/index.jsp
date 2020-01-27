@@ -32,7 +32,7 @@
     <table class='table-body'>
         <tbody>
         <tr><td>
-            <a href="question1.jsp" class="button" style="width:400px;height: 300px" > Start Quiz </a>
+            <a href="question.jsp" class="button" style="width:400px;height: 300px" > Start Quiz </a>
             </td>
         </tr>
         </tbody>

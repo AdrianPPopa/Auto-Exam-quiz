@@ -67,7 +67,10 @@ public class UserController {
     @GetMapping("/about")
     public String about () {return "about";}
 
-    @GetMapping("/question1")
-    public String question1 () {return "question1";}
+    @GetMapping("/question")
+    public String question () {return "question";}
+
+    @GetMapping("/result")
+    public String result () {return "result";}
 
 }

@@ -51,7 +51,11 @@ public class QuestionService {
         for (Question question : questions.getContent()) {
             QuestionResponse questionsResponse = new QuestionResponse();
             questionsResponse.setId(question.getId());
-            questionsResponse.setContent(question.getContent());
+            questionsResponse.setTitle(question.getTitle());
+            questionsResponse.setAnswer1(question.getAnswer1());
+            questionsResponse.setAnswer2(question.getAnswer2());
+            questionsResponse.setAnswer3(question.getAnswer3());
+
 
 
             questionResponses.add(questionsResponse);
@@ -60,4 +64,12 @@ public class QuestionService {
         return new PageImpl<>(questionResponses, pageable,
                 questions.getTotalElements());
     }
+
+
+    public String findAnswerIsCorrect (int questionId){
+        Question userQuestion = questionRepository.findById(questionId).get();
+        for (int i =0; i <questionRepository.findAll().size();i++){
+            return userQuestion.getIsCorrect();
+            } return "";
+        }
 }

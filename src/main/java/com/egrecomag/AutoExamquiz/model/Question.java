@@ -13,13 +13,22 @@ public class Question {
     private int id;
 
     @NotNull
-    private String content;
+    private String title;
 
-    public Question() {
-    }
+    @NotNull
+    private String answer1;
 
-    public Question(@NotNull String content) {
-        this.content = content;
+    @NotNull
+    private String answer2;
+
+    @NotNull
+    private String answer3;
+
+    @NotNull
+    private String isCorrect;
+
+    private Question (){
+
     }
 
     public int getId() {
@@ -30,22 +39,58 @@ public class Question {
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
+    public String getTitle() {
+        return title;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
+    public String getAnswer1() {
+        return answer1;
+    }
+
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
+    }
+
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
+    }
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
+    }
+
+    public String getIsCorrect() {
+        return isCorrect;
+    }
+
+    public void setIsCorrect(String isCorrect) {
+        this.isCorrect = isCorrect;
+    }
 
     @Override
     public String toString() {
         return "Question{" +
                 "id=" + id +
-                ", content='" + content + '\'' +
+                ", title='" + title + '\'' +
+                ", answer1='" + answer1 + '\'' +
+                ", answer2='" + answer2 + '\'' +
+                ", answer3='" + answer3 + '\'' +
+                ", isCorrect='" + isCorrect + '\'' +
                 '}';
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -53,11 +98,15 @@ public class Question {
         if (o == null || getClass() != o.getClass()) return false;
         Question question = (Question) o;
         return id == question.id &&
-                content.equals(question.content);
+                title.equals(question.title) &&
+                answer1.equals(question.answer1) &&
+                answer2.equals(question.answer2) &&
+                answer3.equals(question.answer3) &&
+                isCorrect.equals(question.isCorrect);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, content);
+        return Objects.hash(id, title, answer1, answer2, answer3, isCorrect);
     }
 }
