@@ -1,23 +1,35 @@
 #cssmenu {
     max-height: 50px;
+    background: #000000;
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    background: black;
-    padding: 20px 40px 10px 50px;
-    color: white;
+    width: 100%;
+    z-index: 1;
 }
 
 #cssmenu li {
     margin:0;
     padding: 0;
     display: inline-block;
-    height: 150px;
 }
 
+.index-component {
+    height: 100vh;
+    background: url('/resources/css/stardust.png');
+    background-size: cover;
+    position: relative;
+}
 
+.index-component .btn-primary {
+    max-width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    padding: 30px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .cssbody {
     position: fixed;
@@ -69,7 +81,7 @@ a.button {
     left: 0;
     z-index: 1030;
     font-family: "Times New Roman", serif;
-    background: #696969;
+    background: #000000;
     color: white;
     margin: 0;
     height: 100px;
@@ -81,4 +93,72 @@ a.button {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 30px;
     color: white;
+}
+
+.question-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.login-component {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-component .container {
+    max-width: 450px;
+    background: white;
+    padding: 50px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.login-component .btn {
+    max-width: 160px;
+    margin: 10px 0 20px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.login-component .form-heading {
+    margin-bottom: 20px;
+}
+
+.login-component .form-signin span {
+    color: red;
+    font-weight: 700;
+}
+
+.quiz-component {
+    background: #eeeeee;
+}
+
+.quiz-component form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.quiz-component h2 {
+    text-align: center;
+}
+
+.quiz-component span {
+    font-weight: 700;
+}
+
+.result-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+}
+
+.result-component h2 {
+    background: #ffffff;
+    padding: 50px 100px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }

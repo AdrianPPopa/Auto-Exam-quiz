@@ -12,9 +12,10 @@
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
-<body>
+<body class="login-component">
 
 <div class="container">
     <form method="POST" action="${contextPath}/login" class="form-signin">

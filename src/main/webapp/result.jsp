@@ -8,7 +8,7 @@
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/style.css" rel="stylesheet" >
 </head>
-<body>
+<body class="result-component">
 
 <h2>Your result is ${score}</h2>
 

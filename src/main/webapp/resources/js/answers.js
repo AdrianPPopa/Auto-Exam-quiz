@@ -24,9 +24,9 @@ window.Answerwindow ={
 
     getHtml: function (question) {
         return `           
-                 <ol type="1">
+                 <ul class="question-list" type="1">
                      <li>
-                        ${question.title}
+                        <span> ${question.id}. ${question.title} </span>
                         <input type="hidden" name="questionId" value="${question.id}">
                        <ol type="a">
                       
@@ -44,7 +44,7 @@ window.Answerwindow ={
                        </li>
                        </ol>
                      </li>
-                  </ol>
+                  </ul>
                 `
     },
 

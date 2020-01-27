@@ -10,34 +10,23 @@
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/css/style.css" rel="stylesheet" >
 </head>
-<body>
+<body class="index-component">
 <div id="cssmenu">
     <ul>
         <li><a href="">Home</a></li>
-        <li>Login</li>
-        <li>Register</li>
         <li><a href="about.jsp">About</a></li>
         <li> <c:if test="${pageContext.request.userPrincipal.name != null}">
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 
-            <a onclick="document.forms['logoutForm'].submit()">Logout</a>
+            <a href="" onclick="document.forms['logoutForm'].submit()">Logout</a>
         </c:if>
         </li>
     </ul>
 </div>
 
-<div class="cssbody">
-    <table class='table-body'>
-        <tbody>
-        <tr><td>
-            <a href="question.jsp" class="button" style="width:400px;height: 300px" > Start Quiz </a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<a href="question.jsp" class="btn-lg btn-primary btn-block">Start Quiz</a>
 
 <div class="footer-area">
     <p>If you don’t know where you are going, any road will get you there.</p>
