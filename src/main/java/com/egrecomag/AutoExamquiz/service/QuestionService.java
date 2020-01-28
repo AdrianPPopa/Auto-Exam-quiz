@@ -55,7 +55,7 @@ public class QuestionService {
             questionsResponse.setAnswer1(question.getAnswer1());
             questionsResponse.setAnswer2(question.getAnswer2());
             questionsResponse.setAnswer3(question.getAnswer3());
-
+            questionsResponse.setIsCorrect(question.getIsCorrect());
 
 
             questionResponses.add(questionsResponse);
@@ -66,10 +66,14 @@ public class QuestionService {
     }
 
 
-    public String findAnswerIsCorrect (int questionId){
-        Question userQuestion = questionRepository.findById(questionId).get();
-        for (int i =0; i <questionRepository.findAll().size();i++){
-            return userQuestion.getIsCorrect();
-            } return "";
-        }
+
+//    @Override
+//    public String findAnswerIsCorrect (int questionId) {
+//        Question userQuestion = questionRepository.findById(questionId).get();
+//        for (Iterable<Question questionIterable> :  userQuestion.getIsCorrect()){
+//            if (question.getIsCorrect == (userQuestion.getIsCorrect())){
+//                return question.getIsCorrect();
+//            }
+//        }
+//    }
 }
