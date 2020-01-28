@@ -20,7 +20,7 @@
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 
-            <a href="" onclick="document.forms['logoutForm'].submit()">Logout</a>
+            <a onclick="document.forms['logoutForm'].submit()">Logout</a>
         </c:if>
         </li>
     </ul>
