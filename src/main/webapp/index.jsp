@@ -26,7 +26,7 @@
     </ul>
 </div>
 
-<a href="question.jsp" class="btn-lg btn-primary btn-block">Start Quiz</a>
+<a href="quiz.jsp" class="btn-lg btn-primary btn-block">Start Quiz</a>
 
 <div class="footer-area">
     <p>If you don’t know where you are going, any road will get you there.</p>

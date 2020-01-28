@@ -48,16 +48,14 @@ public class QuestionController {
 
 
         for (String questionId: questionIds){
-            System.out.println(questionId);
             String answerCorrect = questionService.getQuestion(Integer.parseInt(questionId)).getIsCorrect();
             if (answerCorrect.equals(request.getParameter("question_" + questionId))){
                 score++;
             }
         }
-        System.out.println("print something if works");
         System.out.println(score);
-        request.setAttribute("score",score);
-        return "redirect:/result";
+        request.setAttribute("score", score);
+        return "result";
     }
 
 }

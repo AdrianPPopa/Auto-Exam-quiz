@@ -1,14 +1,14 @@
 contextPath = undefined;
-window.Answerwindow ={
+window.quizWindow ={
     API_BASE_URL: "http://localhost:8085",
 
     getQuestions: function () {
         $.ajax({
-            url: Answerwindow.API_BASE_URL + "/questions/",
+            url: quizWindow.API_BASE_URL + "/questions/",
             method: "GET"
         }).done(function (response) {
             console.log(response);
-            Answerwindow.displayQuestion(response.content);
+            quizWindow.displayQuestion(response.content);
         })
     },
 
@@ -17,7 +17,7 @@ window.Answerwindow ={
     displayQuestion: function (questions) {
         var allQuestionsHtml ="";
 
-        questions.forEach(question => allQuestionsHtml += Answerwindow.getHtml(question));
+        questions.forEach(question => allQuestionsHtml += quizWindow.getHtml(question));
         $(".quizmain").html(allQuestionsHtml);
 
     },
@@ -51,4 +51,4 @@ window.Answerwindow ={
 
 };
 
-Answerwindow.getQuestions();
+quizWindow.getQuestions();
